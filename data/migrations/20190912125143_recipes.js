@@ -25,11 +25,13 @@ exports.up = function(knex) {
                 .inTable('ingredients')
                 .onDelete('CASCADE')
                 .onUpdate('CASCADE');
+            tbl.primary(['recipe_id','ingredient_id']);
         })
 };
 
 exports.down = function(knex) {
     return knex.schema
+        .dropTableIfExists('recipe_ingredient')
         .dropTableIfExists('ingredients')
         .dropTableIfExists('recipe_book')
   
