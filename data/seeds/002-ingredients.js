@@ -4,14 +4,24 @@ exports.seed = function(knex) {
   return knex('ingredients').insert([
     {
       ingredient_name: 'bread', 
-      quantity: 2
+      quantity: 2, 
+      recipe_id: 2
     },
     {
-      ingredient_name: 'flour', 
-      quantity: 1
-    },    {
+      ingredient_name: 'tortilla', 
+      quantity: 1,
+      recipe_id: 1
+    },    
+    {
       ingredient_name: 'fajita', 
-      quantity: 3
+      quantity: 3,
+      recipe_id: 1
     },
+    ,    {
+      ingredient_name: 'fajita', 
+      quantity: 3,
+      recipe_id: 2
+    },
+
   ]);
 };
